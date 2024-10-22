@@ -1,0 +1,18 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Models
+@{
+	Layout = "masterTemplate.cshtml";
+}
+<div class="movies">
+    <h1>These are my movies</h1>
+    <div>
+        @{
+            var typedMediaPickerSingle = Model.Value<MediaWithCrops>("imagePicker");
+            if (typedMediaPickerSingle != null)
+            {
+                <img src="@typedMediaPickerSingle.MediaUrl()" style="width:200px" alt="@typedMediaPickerSingle.Value("alt")" />
+            }
+        }
+    </div>
+</div>

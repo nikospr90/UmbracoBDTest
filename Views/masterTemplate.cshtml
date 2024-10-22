@@ -1,0 +1,34 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = null;
+}
+
+
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Welcome to the shitshow</title>
+		<link rel="stylesheet" href="/css/main.css" />
+	</head>
+	<body>
+		<nav>
+			<h1>Special needs kids</h1>
+			<ul>
+				<li><a href="/">Startsida</a></li>
+				<li><a href="/my-movies">My movies</a></li>
+				<li>About</li>
+			</ul>
+		</nav>
+		
+		<div>
+			<!--Main content goes here-->
+			@RenderBody()
+		</div>
+
+		<footer>
+			<p>All rights reserved 2024</p>
+		</footer>
+
+	</body>
+</html>
